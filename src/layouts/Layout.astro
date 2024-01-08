@@ -2,6 +2,8 @@
 import { LOCALE, SITE } from "@config";
 import "@styles/base.css";
 import { ViewTransitions } from "astro:transitions";
+import type { Faqs } from "types";
+import { faqSchema, blogSchema } from "@utils/schemas";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
@@ -14,6 +16,8 @@ export interface Props {
   pubDatetime?: Date;
   modDatetime?: Date | null;
   scrollSmooth?: boolean;
+  faqs?: Faqs;
+  isDetail?: boolean;
 }
 
 const {
@@ -21,10 +25,15 @@ const {
   author = SITE.author,
   description = SITE.desc,
   ogImage = SITE.ogImage,
-  canonicalURL = new URL(Astro.url.pathname, Astro.site).href.replace('.html', ''),
+  canonicalURL = new URL(Astro.url.pathname, Astro.site).href.replace(
+    ".html",
+    ""
+  ),
   pubDatetime,
   modDatetime,
   scrollSmooth = false,
+  faqs,
+  isDetail,
 } = Astro.props;
 
 const socialImageURL = new URL(
@@ -76,6 +85,28 @@ const socialImageURL = new URL(
       )
     }
 
+    <!-- Rich snippet -->
+    {
+      faqs && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqSchema(faqs),
+          })}
+        />
+      )
+    }
+    {
+      isDetail && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(blogSchema(isDetail, canonicalURL, author, title, socialImageURL, pubDatetime, modDatetime))}
+        />
+      )
+    }
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
@@ -86,8 +117,15 @@ const socialImageURL = new URL(
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" as="style">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap">
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+    />
 
     <meta name="theme-color" content="" />
 

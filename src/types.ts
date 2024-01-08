@@ -40,3 +40,8 @@ export type SocialMedia =
   | "Steam"
   | "Telegram"
   | "Mastodon";
+
+export type Faqs = {
+  question: string;
+  answer: string;
+}[];

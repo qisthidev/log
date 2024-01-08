@@ -23,6 +23,7 @@ const {
   modDatetime,
   tags,
   readingTime,
+  faqs,
 } = post.data;
 
 const { Content } = await post.render();
@@ -42,6 +43,8 @@ const layoutProps = {
   canonicalURL,
   ogImage: ogUrl,
   scrollSmooth: true,
+  faqs,
+  isDetail: true,
 };
 ---
 
@@ -70,6 +73,22 @@ const layoutProps = {
     />
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
+
+      {
+        faqs && (
+          <section
+            class="faqs-container grid space-y-6 p-0"
+            aria-roledescription="FAQs (Pertanyaan yang Sering Diajukan)"
+          >
+            {faqs.map(faq => (
+              <details class="mt-0">
+                <summary class="font-semibold">{faq.question}</summary>
+                <p class="m-0">{faq.answer}</p>
+              </details>
+            ))}
+          </section>
+        )
+      }
     </article>
 
     <ul class="my-8">
