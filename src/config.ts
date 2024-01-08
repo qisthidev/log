@@ -1,18 +1,18 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
-  author: "Sat Naing",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "AstroPaper",
-  ogImage: "astropaper-og.jpg",
+  website: "https://www.qisthi.dev/",
+  author: "Qisthi Ramadhani",
+  desc: "Eksplorasi tech-savvy tentang penggunaan framework Laravel, Remix dan pemrograman web full stack.",
+  title: "QLog",
+  ogImage: "blog-banner.jpg",
   lightAndDarkMode: true,
   postPerPage: 3,
 };
 
 export const LOCALE = {
-  lang: "en", // html lang code. Set this empty and default will be "en"
-  langTag: ["en-EN"], // BCP 47 Language Tags. Set this empty [] to use the environment default
+  lang: "id", // html lang code. Set this empty and default will be "en"
+  langTag: ["id-ID"], // BCP 47 Language Tags. Set this empty [] to use the environment default
 } as const;
 
 export const LOGO_IMAGE = {
@@ -25,39 +25,39 @@ export const LOGO_IMAGE = {
 export const SOCIALS: SocialObjects = [
   {
     name: "Github",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: ` ${SITE.title} on Github`,
+    href: "https://github.com/ramaID/blog",
+    linkTitle: ` ${SITE.title} di Github`,
     active: true,
   },
   {
     name: "Facebook",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Facebook`,
+    href: "https://www.facebook.com/ramageek",
+    linkTitle: `${SITE.title} di Facebook`,
     active: true,
   },
   {
     name: "Instagram",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Instagram`,
+    href: "https://www.instagram.com/qisthidev",
+    linkTitle: `${SITE.title} di Instagram`,
     active: true,
   },
   {
     name: "LinkedIn",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on LinkedIn`,
+    href: "https://www.linkedin.com/in/ramageek",
+    linkTitle: `${SITE.title} di LinkedIn`,
     active: true,
   },
   {
     name: "Mail",
-    href: "mailto:yourmail@gmail.com",
-    linkTitle: `Send an email to ${SITE.title}`,
-    active: false,
+    href: "mailto:rama@qisthi.dev",
+    linkTitle: `Kirim email ke ${SITE.title}`,
+    active: true,
   },
   {
     name: "Twitter",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Twitter`,
-    active: false,
+    href: "https://x.com/ramageek",
+    linkTitle: `${SITE.title} di Twitter`,
+    active: true,
   },
   {
     name: "Twitch",
@@ -67,14 +67,14 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "YouTube",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on YouTube`,
-    active: false,
+    href: "https://www.youtube.com/@bybyte",
+    linkTitle: `${SITE.title} di YouTube`,
+    active: true,
   },
   {
     name: "WhatsApp",
     href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on WhatsApp`,
+    linkTitle: `${SITE.title} di WhatsApp`,
     active: false,
   },
   {
@@ -91,9 +91,9 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "TikTok",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on TikTok`,
-    active: false,
+    href: "https://www.tiktok.com/@qisthidev",
+    linkTitle: `${SITE.title} di TikTok`,
+    active: true,
   },
   {
     name: "CodePen",

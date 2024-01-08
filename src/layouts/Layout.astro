@@ -18,6 +18,8 @@ export interface Props {
   scrollSmooth?: boolean;
   faqs?: Faqs;
   isDetail?: boolean;
+  isAbout?: boolean;
+  aboutPageSchema?: any;
 }
 
 const {
@@ -25,15 +27,14 @@ const {
   author = SITE.author,
   description = SITE.desc,
   ogImage = SITE.ogImage,
-  canonicalURL = new URL(Astro.url.pathname, Astro.site).href.replace(
-    ".html",
-    ""
-  ),
+  canonicalURL = new URL(Astro.url.pathname, Astro.site).href.replace(".html", ""),
   pubDatetime,
   modDatetime,
   scrollSmooth = false,
   faqs,
   isDetail,
+  isAbout,
+  aboutPageSchema,
 } = Astro.props;
 
 const socialImageURL = new URL(
@@ -103,6 +104,14 @@ const socialImageURL = new URL(
         <script
           type="application/ld+json"
           set:html={JSON.stringify(blogSchema(isDetail, canonicalURL, author, title, socialImageURL, pubDatetime, modDatetime))}
+        />
+      )
+    }
+    {
+      isAbout && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(aboutPageSchema)}
         />
       )
     }

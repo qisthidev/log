@@ -1,36 +1,16 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "About"
+title: "Profil Pengembang: Qisthi Ramadhani"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+Selamat datang di laman `Tentang` di QLog, sudut tempat Anda dapat mengintip lebih dekat sosok pencipta konten di balik layar ini.
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
+Saya, Qisthi Ramadhani, adalah seorang pengembang web full-stack dengan kegemaran yang tak terukur terhadap teknologi, lebih spesifik lagi pada framewok Laravel. Sejak pertama kali memasuki dunia pemrograman, saya telah melihatnya sebagai sebuah perjalanan tanpa akhir, di mana setiap deretan kode yang saya rancang menjadi puzzle yang menantang untuk diungkap.
 
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+Dengan semangat besar bahwa teknologi, bila dipergunakan dengan penuh kearifan, memiliki daya ubah yang kuat terhadap dunia, saya merasakan kecintaan yang besar terhadap pemrograman. Walaupun saya mengikuti perkembangan teknologi yang terus bergerak cepat, saya tidak pernah lupa akan perasaan kewalahan saat pertama kali belajar coding. Karenanya, melalui QLog, saya bertujuan untuk memperkecil jurang antara pemula dan para profesional. Di sini, Anda akan menemukan panduan yang ringkas bersama analisis yang mendalam tentang bermacam-macam teknologi, dengan spesialisasi pada _framework_ Laravel. Serta, saat ini sedang mempelajari dan mengeksplorasi _framework_ Remix, yang merupakan _framework_ React yang baru saja dirilis.
 
-<div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
-</div>
+Saya yakin bahwa setiap orang memiliki kemampuan untuk belajar dan berkembang dalam industri pemrograman, dan saya ingin berkontribusi pada perjalanan pembelajaran Anda. Lewat QLog, saya membagikan insinyur, inspirasi, serta perspektif teknikal tentang Laravel dan pengembangan web secara lebih luas.
 
-## Tech Stack
+Harapan saya adalah agar QLog bisa menjadi sumber inspirasi dan dukungan untuk Anda dalam menavigasi dan bertumbuh di dunia teknologi dan pemrograman. Saya sangat menghargai dukungan Anda, dan berharap Anda mendapatkan kesenangan serta wawasan berharga dari setiap tulisan yang saya curahkan di QLog.
 
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
-
-## Features
-
-Here are certain features of this site.
-
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
-
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+Terima kasih telah mampir, dan mari kita berkolaborasi untuk menjelajahi serta memperkaya pengalaman kita di dunia yang menakjubkan ini.
