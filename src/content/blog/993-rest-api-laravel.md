@@ -31,7 +31,7 @@ docker run --rm \
 
 _Command_ diatas kita akan menjalan sebuah _container_ Docker yang akan menginstall **Laravel** dengan **Laravel Installer** pada direktori `laravel-rest-api` yang ada di direktori kerja saat ini. Pada prosesnya, kita akan ditanyakan mengenai _setup_ yang akan digunakan. Berikut ini adalah contoh _setup_ yang saya gunakan:
 
-![Jawaban prompt pada Laravel Installer](/assets/rest-api-laravel/prompt-setup-aplikasi-laravel.png)
+![Jawaban prompt pada Laravel Installer](../../assets/rest-api-laravel/prompt-setup-aplikasi-laravel.png)
 
 Selanjutnya, kita akan membuat database yang khusus untuk keperluan testing. Buat berkas di folder **database** dengan nama `create-testing-database.sh` dan isi dengan kode berikut:
 
@@ -183,7 +183,7 @@ Laravel Data adalah sebuah _package_ yang dibuat oleh [Spatie](https://spatie.be
 composer require spatie/laravel-data
 ```
 
-![Laravel Data oleh Spatie](/assets/rest-api-laravel/instalasi-laravel-data.png)
+![Laravel Data oleh Spatie](../../assets/rest-api-laravel/instalasi-laravel-data.png)
 
 Dengan _package_ ini membuat lebih mudah untuk menciptakan objek data yang kaya dan bisa digunakan dalam banyak cara. Sehingga, kita hanya perlu menjelaskan data kamu sekali saja, misalnya:
 
@@ -357,7 +357,7 @@ Validasi route yang telah kita buat dengan menjalankan perintah berikut:
 php artisan route:list
 ```
 
-![Mendefinisikan API Route untuk Product di Laravel 10](/assets/rest-api-laravel/validasi-pembuatan-route.png)
+![Mendefinisikan API Route untuk Product di Laravel 10](../../assets/rest-api-laravel/validasi-pembuatan-route.png)
 
 ## Menguji API
 
