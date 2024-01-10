@@ -1,6 +1,6 @@
 ---
 author: Qisthi Ramadhani
-pubDatetime: 2024-01-11T15:22:00Z
+pubDatetime: 2024-01-08T15:22:00Z
 title: "Integrasi Remix dengan Laravel: Membangun Fetch API Kustom dengan TypeScript"
 slug: "integrasi-remix-dengan-laravel-membangun-fetch-api-kustom-dengan-typescript"
 description: "Pelajari cara mengintegrasikan Remix dengan Laravel menggunakan Fetch API kustom di TypeScript. Artikel ini membahas pembuatan fungsi laraFetch, pengelolaan token CSRF, dan pengolahan response HTTP untuk keamanan dan efisiensi komunikasi antar-framework. Ideal untuk pengembang yang mencari solusi integrasi tanpa pustaka pihak ketiga."
@@ -110,8 +110,8 @@ export default async function laraFetch<T>(
     body,
   });
 
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
+  if ([500, 502, 503, 504, 505].includes(response.status)) {
+    throw new Error(`Laravel server error! Status: ${response.statusText}`);
   }
 
   return response as T;
@@ -129,7 +129,7 @@ Aspek penting dari fungsi ini adalah pengelolaan token CSRF. Fungsi ini secara c
 Fungsi ini bertugas mengelola response dari request yang dibuat. Dengan `laraReq`, kita dapat dengan mudah menangani berbagai status HTTP, termasuk kasus-kasus seperti unauthorized (401) atau entity error (422).
 
 ```typescript
-export async function laraReq<T, K>(
+export async function laraReq<T, K = Response>(
   fetchable: Promise<T>,
   onSuccess?: (param?: Response) => K,
   onUnauthorized?: (param?: Response) => K
