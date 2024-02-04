@@ -63,10 +63,12 @@ InertiaJS menawarkan banyak keuntungan, termasuk:
 
 - **Pengembangan Lebih Cepat**: Mengurangi kebutuhan untuk membangun dan mengelola API terpisah.
 - **Penyederhanaan Proses**: Mengintegrasi SPA dengan backend secara seamless, mengeliminasi banyak tugas pengembangan frontend-backend yang rumit.
-- **Fleksibilitas**: Meski sering digunakan dengan Laravel dan React, Inertia mendukung berbagai teknologi frontend dan backend, termasuk React dan Rails.
+- **Fleksibilitas**: Meski sering digunakan dengan Laravel dan React, Inertia mendukung berbagai teknologi frontend dan backend, termasuk Vue dan Rails.
 
 ## Penutup
 
 InertiaJS memberi pengembang kemampuan untuk membangun SPA dengan efisiensi dan kecepatan yang meningkat, sambil mempertahankan paradigma pengembangan yang familiar bagi mereka yang menggunakan Laravel atau React. Dengan mengurangi kompleksitas yang biasa terkait dengan SPA, Inertia membuka jalan bagi aplikasi web yang lebih responsif dan mudah dikembangkan.
 
 Sekarang, setelah memahami kemudahan dan kecepatan yang ditawarkan oleh InertiaJS, apakah Anda akan mengintegrasikannya ke dalam proyek Anda berikutnya? Sudah saatnya merangkul solusi yang lebih streamlined untuk pembuatan SPA.
+
+## Pertanyaan yang sering diajukan (FAQs)
