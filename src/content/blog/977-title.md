@@ -7,6 +7,7 @@ slug: optimalisasi-performa-aplikasi-web-dengan-laravel-dan-docker-studi-kasus-b
 tags:
   - laravel
   - docker
+featured: true
 ---
 
 Dalam era digital saat ini, performa menjadi salah satu faktor kritis dalam kesuksesan aplikasi web. Aplikasi yang responsif tidak hanya meningkatkan kepuasan pengguna tetapi juga memainkan peran penting dalam SEO dan retensi pengguna. Laravel, salah satu framework yang populer di kalangan pengembang web, ketika dikombinasikan dengan Docker, menawarkan potensi yang luar biasa untuk memaksimalkan performa aplikasi. Dalam artikel ini, kita akan melakukan eksplorasi mendalam terhadap penerapan benchmark pada Laravel, terutama dalam konfigurasi yang menggunakan Docker, dan mendapatkan insight tentang metrik Requests Per Second (RPS) yang diperoleh.
