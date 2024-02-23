@@ -145,6 +145,11 @@
     --shiki-warning-color: rgba(234, 179, 8, 0.16);
   }
 
+  pre,
+  pre.astro-code {
+    @apply overflow-x-auto px-6 py-4;
+  }
+
   pre.astro-code > code .line.diff,
   pre.astro-code > code .line.highlighted {
     @apply -mx-6 inline-block w-[calc(100%_+_3rem)] px-6
