@@ -4,7 +4,6 @@ pubDatetime: 2023-10-01T15:22:00Z
 title: "Laravel 10: Memaksimalkan Developer Experience (DX)"
 slug: laravel-10-memaksimalkan-developer-experience
 description: Di versi 10, Laravel memperkenalkan beberapa fitur baru. Yang paling menarik perhatian saya ialah fitur type-hint yang bisa membuat kita memaksimalkan developer experience.
-featured: true
 tags:
   - laravel
   - dx
