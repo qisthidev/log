@@ -25,7 +25,7 @@ export const LOGO_IMAGE = {
 export const SOCIALS: SocialObjects = [
   {
     name: "Github",
-    href: "https://github.com/ramaID/blog",
+    href: "https://github.com/ramaID/log",
     linkTitle: ` ${SITE.title} di Github`,
     active: true,
   },
@@ -67,7 +67,7 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "YouTube",
-    href: "https://www.youtube.com/@bybyte",
+    href: "https://www.youtube.com/@qisthidev",
     linkTitle: `${SITE.title} di YouTube`,
     active: true,
   },
