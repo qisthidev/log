@@ -21,8 +21,8 @@ docker run --rm \
     --pull=always \
     -v "$(pwd)":/opt \
     -w /opt \
-    -it ramageek/php:beta-8.1-sprint-laravel \
-    bash -c "laravel new laravel-webapp"
+    -it ramageek/image:php8.3-laravel \
+    bash -c "/composer/vendor/bin/laravel new laravel-webapp"
 ```
 
 ### Run shell in container temporary
@@ -34,10 +34,16 @@ docker run --rm --name php -it image:tag sh
 ## Service Camunda Client
 
 ```php
-'camunda' => [
-    'url' => env('CAMUNDA_URL', 'https://localhost:8080/engine-rest'),
-    'user' => env('CAMUNDA_USER', 'demo'),
-    'password' => env('CAMUNDA_PASSWORD', 'demo'),
-    'tenant_id' => env('CAMUNDA_TENANT_ID', ''),
-],
+<?php
+
+return [
+    ...
+    'camunda' => [
+      'url' => env('CAMUNDA_URL', 'https://localhost:8080/engine-rest'),
+      'user' => env('CAMUNDA_USER', 'demo'),
+      'password' => env('CAMUNDA_PASSWORD', 'demo'),
+      'tenant_id' => env('CAMUNDA_TENANT_ID', ''),
+  ],
+];
+
 ```
