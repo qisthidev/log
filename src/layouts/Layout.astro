@@ -27,7 +27,10 @@ const {
   author = SITE.author,
   description = SITE.desc,
   ogImage = SITE.ogImage,
-  canonicalURL = new URL(Astro.url.pathname, Astro.site).href.replace(".html", ""),
+  canonicalURL = new URL(Astro.url.pathname, Astro.site).href.replace(
+    ".html",
+    ""
+  ),
   pubDatetime,
   modDatetime,
   scrollSmooth = false,
@@ -61,6 +64,7 @@ const socialImageURL = new URL(
     <meta name="description" content={description} />
     <meta name="author" content={author} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="google-adsense-account" content="ca-pub-6637656443518493" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={title} />
@@ -103,7 +107,17 @@ const socialImageURL = new URL(
       isDetail && (
         <script
           type="application/ld+json"
-          set:html={JSON.stringify(blogSchema(isDetail, canonicalURL, author, title, socialImageURL, pubDatetime, modDatetime))}
+          set:html={JSON.stringify(
+            blogSchema(
+              isDetail,
+              canonicalURL,
+              author,
+              title,
+              socialImageURL,
+              pubDatetime,
+              modDatetime
+            )
+          )}
         />
       )
     }
