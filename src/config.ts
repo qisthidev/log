@@ -1,7 +1,7 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://www.qisthi.dev/",
+  website: "https://log.qisthi.dev/",
   author: "Qisthi Ramadhani",
   desc: "Eksplorasi tech-savvy tentang penggunaan framework Laravel, Remix dan pemrograman web full stack.",
   title: "QLog",
