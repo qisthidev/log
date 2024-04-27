@@ -9,7 +9,7 @@ export async function GET() {
     const dateLastMod = new Date(lastMod).toISOString();
     return `
   <url>
-    <loc>https://astro-paper.qisthi.dev/posts/${post.slug}</loc>
+    <loc>https://log.qisthi.dev/posts/${post.slug}</loc>
     <lastmod>${dateLastMod}</lastmod>
   </url>`;
   });
