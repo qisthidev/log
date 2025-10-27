@@ -167,11 +167,22 @@ const socialImageURL = new URL(
     {
       // Include Google AdSense script if enabled
       ADSENSE.enabled && (
-        <script
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE.publisherId}`}
-          crossorigin="anonymous"
-        ></script>
+        <>
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE.publisherId}`}
+            crossorigin="anonymous"
+          ></script>
+          <script is:inline>
+            // Initialize AdSense ads when the page loads
+            document.addEventListener("DOMContentLoaded", function () {
+              const ads = document.querySelectorAll(".adsbygoogle");
+              ads.forEach(function () {
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+              });
+            });
+          </script>
+        </>
       )
     }
 

@@ -9,7 +9,7 @@ export interface Props {
 }
 
 const {
-  slot = "auto",
+  slot = "",
   format = "auto",
   responsive = true,
   className = "",
@@ -27,9 +27,6 @@ const {
         data-ad-format={format}
         data-full-width-responsive={responsive.toString()}
       />
-      <script is:inline>
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
     </div>
   )
 }

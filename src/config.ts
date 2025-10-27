@@ -12,7 +12,8 @@ export const SITE: Site = {
 
 export const ADSENSE = {
   enabled: true,
-  publisherId: "ca-pub-6637656443518493",
+  publisherId:
+    import.meta.env.PUBLIC_ADSENSE_PUBLISHER_ID || "ca-pub-6637656443518493",
 };
 
 export const LOCALE = {
