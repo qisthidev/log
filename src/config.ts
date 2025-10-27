@@ -11,7 +11,7 @@ export const SITE: Site = {
 };
 
 export const ADSENSE = {
-  enabled: true,
+  enabled: import.meta.env.ADSENSE_IS_ENABLED || true,
   publisherId:
     import.meta.env.PUBLIC_ADSENSE_PUBLISHER_ID || "ca-pub-6637656443518493",
 };
