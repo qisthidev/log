@@ -1,0 +1,38 @@
+---
+import { ADSENSE } from "@config";
+
+export interface Props {
+  slot?: string;
+  format?: string;
+  responsive?: boolean;
+  className?: string;
+}
+
+const {
+  slot = "",
+  format = "auto",
+  responsive = true,
+  className = "",
+} = Astro.props;
+---
+
+{
+  ADSENSE.enabled && (
+    <div class={`adsense-container ${className}`}>
+      <ins
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client={ADSENSE.publisherId}
+        data-ad-slot={slot}
+        data-ad-format={format}
+        data-full-width-responsive={responsive.toString()}
+      />
+    </div>
+  )
+}
+
+<style>
+  .adsense-container {
+    @apply my-8 w-full;
+  }
+</style>

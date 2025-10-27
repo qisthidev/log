@@ -10,6 +10,12 @@ export const SITE: Site = {
   postPerPage: 3,
 };
 
+export const ADSENSE = {
+  enabled: import.meta.env.ADSENSE_IS_ENABLED || true,
+  publisherId:
+    import.meta.env.PUBLIC_ADSENSE_PUBLISHER_ID || "ca-pub-6637656443518493",
+};
+
 export const LOCALE = {
   lang: "id", // html lang code. Set this empty and default will be "en"
   langTag: ["id-ID"], // BCP 47 Language Tags. Set this empty [] to use the environment default

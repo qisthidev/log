@@ -1,5 +1,5 @@
 ---
-import { LOCALE, SITE } from "@config";
+import { LOCALE, SITE, ADSENSE } from "@config";
 import "@styles/base.css";
 import { ViewTransitions } from "astro:transitions";
 import type { Faqs } from "types";
@@ -161,6 +161,28 @@ const socialImageURL = new URL(
           name="google-site-verification"
           content={googleSiteVerification}
         />
+      )
+    }
+
+    {
+      // Include Google AdSense script if enabled
+      ADSENSE.enabled && (
+        <>
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE.publisherId}`}
+            crossorigin="anonymous"
+          ></script>
+          <script is:inline>
+            // Initialize AdSense ads when the page loads
+            document.addEventListener("DOMContentLoaded", function () {
+              const ads = document.querySelectorAll(".adsbygoogle");
+              ads.forEach(function () {
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+              });
+            });
+          </script>
+        </>
       )
     }
 

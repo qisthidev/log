@@ -4,6 +4,7 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
+import AdSense from "@components/AdSense.astro";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 
@@ -90,6 +91,8 @@ const layoutProps = {
         )
       }
     </article>
+
+    <AdSense className="my-8" />
 
     <ul class="my-8">
       {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}
